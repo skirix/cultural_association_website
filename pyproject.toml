@@ -1,0 +1,23 @@
+[project]
+name = "cultural_association_website"
+version = "0.1.0"
+description = "cultural-association-website using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.105.0,<1.0.0"
+]
+
+[project.scripts]
+cultural_association_website = "cultural_association_website.main:run"
+run_crew = "cultural_association_website.main:run"
+train = "cultural_association_website.main:train"
+replay = "cultural_association_website.main:replay"
+test = "cultural_association_website.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,65 @@
+# config/tasks.yaml
+requirements_gathering:
+  description: >
+    Create a comprehensive requirements document for a cultural association website.
+    The website should be robust, scalable, and designed with simplicity and performance in mind.
+    Include functional requirements (what the website should do) and non-functional requirements
+    (performance, security, accessibility, etc.).
+  expected_output: >
+    A detailed requirements document with functional and non-functional requirements, 
+    user personas, and key features for a cultural association website.
+  agent: requirements_analyst
+
+design_creation:
+  description: >
+    Based on the requirements document, create a design specification for the cultural
+    association website. Include information about layout, color scheme, typography,
+    and other design elements. Design should be responsive, accessible, and reflect
+    the cultural nature of the association.
+  expected_output: >
+    A comprehensive design specification including wireframes, color palette,
+    typography choices, and responsive design considerations.
+  agent: ux_ui_designer
+  context:
+    - requirements_gathering
+
+frontend_development:
+  description: >
+    Based on the design specification and requirements, develop the frontend 
+    code for the cultural association website. The code should be responsive,
+    accessible, and performant. Use modern HTML, CSS, and JavaScript best practices.
+  expected_output: >
+    Complete frontend code including HTML, CSS, and JavaScript files,
+    along with documentation on how to deploy and maintain the frontend.
+  agent: frontend_developer
+  context:
+    - requirements_gathering
+    - design_creation
+
+backend_development:
+  description: >
+    Design and implement the backend systems required for the cultural association
+    website based on the requirements document. Include any necessary APIs,
+    database schemas, and server configurations.
+  expected_output: >
+    Complete backend code, database schema definitions, API documentation,
+    and deployment instructions.
+  agent: backend_developer
+  context:
+    - requirements_gathering
+
+qa_testing:
+  description: >
+    Test the complete website to ensure it meets all requirements and functions
+    correctly. Check for bugs, performance issues, accessibility problems,
+    and user experience issues.
+  expected_output: >
+    A detailed testing report highlighting any issues found, along with
+    recommendations for improvements.
+  agent: qa_tester
+  context:
+    - requirements_gathering
+    - design_creation
+    - frontend_development
+    - backend_development
+  output_file: output/qa_report.md

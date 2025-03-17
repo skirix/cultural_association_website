@@ -10,7 +10,11 @@ requirements_analyst:
     understanding client needs and translating them into clear technical 
     specifications. You've worked with cultural organizations before and 
     understand their specific needs.
-  llm: ollama/mistral:7b
+  llm: claude-3-7-sonnet-20250219
+  #llm: claude-3-haiku-20240307
+  max_retry_limit: 5
+  verbose_tools: true
+
 
   # config/agents.yaml
 ux_ui_designer:
@@ -24,7 +28,11 @@ ux_ui_designer:
     cultural organizations. You understand the importance of balancing 
     aesthetics with usability and accessibility, and you know how to 
     create designs that reflect the unique identity of cultural associations.
-  llm: ollama/mistral:7b
+  llm: claude-3-7-sonnet-20250219
+  #llm: claude-3-haiku-20240307
+  max_retry_limit: 5
+  verbose_tools: true
+
 
   # config/agents.yaml
 frontend_developer:
@@ -38,7 +46,11 @@ frontend_developer:
     in HTML5, CSS3, JavaScript, and responsive design. You code with simplicity 
     and performance in mind, ensuring websites load quickly and function 
     flawlessly across all devices.
-  llm: ollama/mistral:7b
+  llm: claude-3-7-sonnet-20250219
+  #llm: claude-3-haiku-20240307
+  max_retry_limit: 5
+  verbose_tools: true
+
 
   # config/agents.yaml
 backend_developer:
@@ -52,7 +64,10 @@ backend_developer:
     robust server architectures. You prioritize security, scalability, 
     and clean code design patterns. You excel at building systems that 
     can grow with an organization's needs.
-  llm: ollama/mistral:7b
+  llm: claude-3-7-sonnet-20250219
+  #llm: claude-3-haiku-20240307
+  max_retry_limit: 5
+  verbose_tools: true
 
   # config/agents.yaml
 qa_tester:
@@ -65,4 +80,7 @@ qa_tester:
     You have a keen eye for detail and a methodical approach to testing. 
     You've worked on hundreds of websites and can quickly identify issues 
     with functionality, performance, accessibility, and user experience.
-  llm: ollama/mistral:7b
+  llm: claude-3-7-sonnet-20250219
+  #llm: claude-3-haiku-20240307
+  max_retry_limit: 5
+  verbose_tools: true
